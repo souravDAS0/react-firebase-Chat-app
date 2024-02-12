@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-firebase-Chat-app/static/css/main.2f01a510.css",
-    "main.js": "/react-firebase-Chat-app/static/js/main.0c02d3b4.js",
+    "main.css": "/react-firebase-Chat-app/static/css/main.00ae82ee.css",
+    "main.js": "/react-firebase-Chat-app/static/js/main.48dd9a4f.js",
     "static/media/signinbutton.png": "/react-firebase-Chat-app/static/media/signinbutton.efad756da941579739b1.png",
     "index.html": "/react-firebase-Chat-app/index.html",
-    "main.2f01a510.css.map": "/react-firebase-Chat-app/static/css/main.2f01a510.css.map",
-    "main.0c02d3b4.js.map": "/react-firebase-Chat-app/static/js/main.0c02d3b4.js.map"
+    "main.00ae82ee.css.map": "/react-firebase-Chat-app/static/css/main.00ae82ee.css.map",
+    "main.48dd9a4f.js.map": "/react-firebase-Chat-app/static/js/main.48dd9a4f.js.map"
   },
   "entrypoints": [
-    "static/css/main.2f01a510.css",
-    "static/js/main.0c02d3b4.js"
+    "static/css/main.00ae82ee.css",
+    "static/js/main.48dd9a4f.js"
   ]
 }
