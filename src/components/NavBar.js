@@ -24,7 +24,7 @@ const NavBar = () => {
           Sign Out
         </button>
       ) : (
-        <button className="sign-in">
+        <button className="sign-in small">
           <img
             onClick={signIn}
             src={signinButton}

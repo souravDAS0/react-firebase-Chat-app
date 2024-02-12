@@ -62,11 +62,23 @@ input {
 .sign-in {
   border: none;
   background-color: transparent;
+  
 }
+
+.sign-in.small{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .sign-in>img {
   height: 40px;
   width: auto;
+}
+
+.sign-in.small>img {
+  height: 25px;
 }
 
 .sign-out {
