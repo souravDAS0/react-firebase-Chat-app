@@ -12,7 +12,7 @@ const Welcome = () => {
   return (
     <main className="welcome">
       <h2>Welcome to React Chat.</h2>
-      <img src="/logo512.png" alt="ReactJs logo" width={50} height={50} />
+
       <p>Guys Sign in with Google to Chat.</p>
       <p>Let's Go.</p>
       <button className="sign-in">
