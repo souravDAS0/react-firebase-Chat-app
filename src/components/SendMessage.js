@@ -4,11 +4,6 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 
 const SendMessage = ({ scroll }) => {
   const [message, setMessage] = useState("");
-  const [disable, setDisable] = useState(true);
-
-  useEffect(() => {
-    setDisable(() => (message === "" ? true : false));
-  });
 
   const SendMessage = async (event) => {
     event.preventDefault();
@@ -22,7 +17,7 @@ const SendMessage = ({ scroll }) => {
       uid,
     });
     setMessage("");
-    scroll.current.scrollIntoView({ behavior: "smooth" });
+    // scroll.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -39,7 +34,7 @@ const SendMessage = ({ scroll }) => {
         value={message}
         onChange={(e) => setMessage(e.target.value)}
       />
-      <button type="submit" disabled={disable}>
+      <button type="submit" disabled={message === ""}>
         Send
       </button>
     </form>

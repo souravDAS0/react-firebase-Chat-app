@@ -12,10 +12,17 @@ import SendMessage from "./SendMessage";
 import Message from "./Message";
 
 const ChatBox = () => {
+  console.log("ChatBox Rendered");
+
   const [messages, setMessages] = useState([]);
   const scroll = useRef();
 
+  const scrollToEnd = () => {
+    scroll?.current?.scrollIntoView({ behaviour: "smooth" });
+  };
+
   useEffect(() => {
+    console.log("useEffect Ran");
     const q = query(
       collection(db, "messages"),
       orderBy("createdAt", "desc"),
@@ -23,6 +30,7 @@ const ChatBox = () => {
     );
 
     const unsubscribe = onSnapshot(q, (QuerySnapshot) => {
+      console.log("USeEffect Unsubscribed");
       const fetchedMessages = [];
       QuerySnapshot.forEach((doc) => {
         fetchedMessages.push({ ...doc.data(), id: doc.id });
@@ -38,12 +46,14 @@ const ChatBox = () => {
   return (
     <main className="chat-box">
       <div className="messages-wrapper">
-        {messages?.map((message) => (
-          <Message key={message.id} message={message} />
-        ))}
+        <>
+          {messages?.map((message) => (
+            <Message key={message.id} message={message} />
+          ))}
+          <span ref={scroll}></span>
+        </>
       </div>
       {/* when a new message enters the chat, the screen scrolls down to the scroll div */}
-      <span ref={scroll}></span>
       <SendMessage scroll={scroll} />
     </main>
   );
